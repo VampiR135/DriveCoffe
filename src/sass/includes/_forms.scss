@@ -80,7 +80,7 @@ fieldset {
   font-size: rem(15);
   line-height: rem(18);
   color: $red;
-  background-color: lighten($red, 45%);
+  background-color: lighten($red, 40%);
   transition: opacity 400ms;
   opacity: 0;
 
@@ -91,7 +91,7 @@ fieldset {
     top: -5px;
     width: 10px;
     height: 10px;
-    background-color: lighten($red, 45%);
+    background-color: lighten($red, 40%);
     transform: rotate(45deg);
   }
 }

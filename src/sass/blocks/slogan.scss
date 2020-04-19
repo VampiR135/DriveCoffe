@@ -1,0 +1,23 @@
+.slogan {
+
+  &_text {
+    font-size: rem(34);
+    line-height: rem(40);
+
+    @include media-breakpoint-down(lg) {
+      font-size: rem(28);
+      line-height: rem(34);
+    }
+    @include media-breakpoint-down(md) {
+      font-size: rem(20);
+      line-height: rem(20);
+    }
+  }
+  &_img {
+    position: absolute;
+    left: 23%;
+    bottom: -9px;
+    width: 83%;
+    z-index: 1;
+  }
+}

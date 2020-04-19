@@ -20,7 +20,7 @@
         },
         {
             img: 'feedback_3.jpg',
-            name: '@prostota',
+            name: '@mariabelluccii',
             location: 'Togliatti, Russia',
             description: 'Благодаря @drivecoffeetlt день становится ещё вкуснее',
             tags: '#drivecoffee #drivecoffeetlt #coffeetime',
@@ -44,7 +44,7 @@
         }
     ];
 
-.row.justify-content-center
+.row.no-gutters.justify-content-center
     .col-10.col-md-12
         .swiper-container.home_slider
             .swiper-wrapper
@@ -54,6 +54,7 @@
                         .home_slider_text
                             p.home_slider_name
                                 span=item.name
+                                br
                                 | #{item.location}
                             p.home_slider_description=item.description
                             if item.tags

@@ -1,8 +1,11 @@
 footer {
-  padding: rem(58) 0;
   background-color: $black;
 
-  a:hover {
+  a {
     color: $white !important;
+
+    &:hover {
+      color: $primary !important;
+    }
   }
 }

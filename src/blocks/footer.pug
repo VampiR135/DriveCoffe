@@ -20,7 +20,7 @@
 include social_links
 
 footer
-    .container
+    .container.py-5
         .row.justify-content-center
             .col-12.col-md-10
                 .row.align-items-center.justify-content-between
@@ -29,7 +29,8 @@ footer
                         a(href='mailto:mail@drivecoffee.ru').d-block.d-md-none mail@drivecoffee.ru
                     .col-3.d-none.d-md-block
                         a(href='mailto:mail@drivecoffee.ru') mail@drivecoffee.ru
-                    .social.row.align-items-center.justify-content-between
-                        for item in cosialList
-                            a(href=item.link).social_item.svg.d-block
-                                +social-link(item.icon)
+                    .social.col-3.row.justify-content-end
+                        .col-12.row.align-items-center.justify-content-between
+                            for item in cosialList
+                                a(href=item.link).social_item.svg.d-block
+                                    +social-link(item.icon)

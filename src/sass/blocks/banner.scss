@@ -26,17 +26,25 @@
     padding-bottom: 465px;
   }
   &_home &_wrapper {
-    padding-bottom: 860px;
+    padding-bottom: 77.5%;
+
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 57%;
+    }
+    @include media-breakpoint-down(md) {
+      padding-bottom: 78%;
+    }
   }
   &_content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    top: 57.9%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
   }
   &_logo {
-    width: 726px;
-    padding-bottom: 103px;
+    width: 65.4%;
+    padding-bottom: 9.3%;
     margin: 0 auto;
 
     svg {
@@ -47,9 +55,15 @@
     text-align: center;
     text-align-last: center;
     color: $white;
-    margin-top: 2rem;
+    margin-top: rem(38);
     font-size: rem(30);
     line-height: rem(30);
     font-family: $font-alternative;
+
+    @include media-breakpoint-down(md) {
+      margin-top: rem(25);
+      font-size: rem(18);
+      line-height: rem(18);
+    }
   }
 }

@@ -2,7 +2,7 @@ mixin banner(img, logo)
     if logo
         div.banner.banner_home(style=`background-image: url('/img/${img}');`)
             .container
-                .banner_wrapper
+                .banner_wrapper.pos-rel
                     .banner_content
                         .banner_logo.svg
                             include ../img/logo.svg

@@ -4,7 +4,6 @@ header {
   left: 0;
   width: 100%;
   border-bottom: 2px solid $primary;
-  padding: 10px 0;
   transition: background-color 400ms;
   z-index: 100;
   @include media-breakpoint-down(md) {
@@ -12,12 +11,21 @@ header {
   }
 }
 .header {
+
+  &_container {
+    padding: 30px 0;
+    transition: padding 400ms;
+
+    @include media-breakpoint-down(lg) {
+      padding: 12px 0;
+    }
+  }
   &_menu {
     width: calc((100% - (16.7% + 100px)) / 2);
     transition: background-color 500ms;
 
     @include media-breakpoint-down(lg) {
-      width: calc((100% - (15% + 60px)) / 2);
+      width: calc((100% - (15% + 35px)) / 2);
     }
     @include media-breakpoint-down(md) {
       width: calc((100% - (15% + 40px)) / 2);
@@ -110,7 +118,7 @@ header {
     }
   }
   &_logo {
-    width: 16.7%;
+    width: 17%;
 
     @include media-breakpoint-down(lg) {
       width: 15%;
@@ -144,6 +152,13 @@ header {
   }
   &--fixed {
     background-color: $white;
+  }
+  &--fixed &_container {
+    padding: 15px 0;
+
+    @include media-breakpoint-down(lg) {
+      padding: 10px 0;
+    }
   }
   &--fixed &_menu {
 

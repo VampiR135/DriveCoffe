@@ -1,6 +1,7 @@
 .swiper-pagination {
   width: 100%;
   position: relative;
+  line-height: 0;
 }
 .swiper-pagination-bullet {
   box-sizing: border-box;
@@ -11,6 +12,12 @@
   opacity: 1;
   margin: 0 15px;
   outline: none !important;
+
+  @include media-breakpoint-down(md) {
+    width: 9px;
+    height: 9px;
+    margin: 0 9px;
+  }
 }
 .swiper-pagination-bullet-active {
   background: $primary;

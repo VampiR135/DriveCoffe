@@ -12,19 +12,32 @@
   text-decoration: none;
   box-shadow: none;
   border-radius: rem(30);
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: all 300ms;
   background-color: transparent;
   outline: none;
 
   @include media-breakpoint-down(lg) {
-    min-width: rem(190);
-    padding: rem(12) rem(15);
+    padding: rem(15) rem(15);
     font-size: rem(20);
     line-height: rem(20);
   }
+  @include media-breakpoint-down(md) {
+    padding: rem(11) rem(20);
+    font-size: rem(13);
+    line-height: rem(13);
+    min-width: rem(125);
+  }
   &:hover {
     cursor: pointer;
+
+    .svg {
+      right: 17px;
+
+      @include media-breakpoint-down(md) {
+        right: 11px;
+      }
+    }
   }
   .svg {
     position: absolute;
@@ -33,7 +46,13 @@
     top: 50%;
     right: 20px;
     transform: translate(0, -50%);
+    transition: right 400ms;
 
+    @include media-breakpoint-down(md) {
+      width: 6px;
+      padding-bottom: 12px;
+      right: 15px;
+    }
     svg {
       fill: $black;
       transition: fill 300ms;

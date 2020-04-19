@@ -38,7 +38,6 @@ window.onload = function (container, options) {
 			slidesPerView: 'auto',
 			centeredSlides: true,
 			slideToClickedSlide: true,
-			spaceBetween: 30,
 			pagination: {
 				el: '.home_slider_pagination',
 				clickable: true,
@@ -52,7 +51,7 @@ window.onload = function (container, options) {
 					spaceBetween: 30
 				},
 				992: {
-					spaceBetween: 40
+					spaceBetween: 30
 				}
 			}
 		});
@@ -102,10 +101,15 @@ window.onload = function (container, options) {
 
 	const submitForm = function (form, id) {
 		const pathList = {
-						'vacancy_form': '/form/vacancy',
-						'feedback_form': '/form/feedback'
+						'vacancy_form': '/api/v1/vacancy/',
+						'feedback_form': '/api/v1/feedback/'
 					},
-					data = JSON.stringify(serializeForm(form));
+					data = serializeForm(form),
+					dataJSON = {};
+
+		for(let i = 0; i < data.length; i++) {
+			dataJSON[data[i].name] = data[i].value;
+		}
 
 		const request = new XMLHttpRequest();
 		request.open('POST', pathList[id], true);
@@ -149,7 +153,7 @@ window.onload = function (container, options) {
 			}).showToast();
 		};
 
-		request.send(data);
+		request.send(JSON.stringify(dataJSON));
 	};
 
 	const formList = document.querySelectorAll('form');
