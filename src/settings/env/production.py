@@ -8,23 +8,13 @@ ALLOWED_HOSTS = [
     '*',
 ]
 
-USER_PG = os.getenv('POSTGRES_USER')
-PASSWORD_PG = os.getenv('POSTGRES_PASSWORD')
-HOST_PG = os.getenv('POSTGRES_HOST')
-PORT_PG = os.getenv('POSTGRES_PORT')
-ENGINE_PG = 'django.db.backends.postgresql_psycopg2'
-DEFAULT_NAME = os.getenv('POSTGRES_DB')
-
 DATABASES = {
     'default': {
-        'ENGINE': ENGINE_PG,
-        'NAME': DEFAULT_NAME,
-        'USER': USER_PG,
-        'PASSWORD': PASSWORD_PG,
-        'HOST': HOST_PG,
-        'PORT': PORT_PG,
-        'AUTOCOMMIT': True,
-        'CONN_MAX_AGE': 300,
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'u0976945_default',
+        'USER': 'u0976945_default',
+        'PASSWORD': '99A!csy8',
+        'HOST': 'localhost'
     },
 }
 
