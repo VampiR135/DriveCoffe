@@ -23,10 +23,14 @@
     line-height: rem(20);
   }
   @include media-breakpoint-down(md) {
+    min-width: rem(125);
     padding: rem(11) rem(20);
     font-size: rem(13);
     line-height: rem(13);
-    min-width: rem(125);
+    border-width: 1px;
+  }
+  @include media-breakpoint-down(sm) {
+    min-width: rem(115);
   }
   &:hover {
     cursor: pointer;
@@ -35,6 +39,9 @@
       right: 17px;
 
       @include media-breakpoint-down(md) {
+        right: 11px;
+      }
+      @include media-breakpoint-down(sm) {
         right: 11px;
       }
     }
@@ -51,6 +58,11 @@
     @include media-breakpoint-down(md) {
       width: 6px;
       padding-bottom: 12px;
+      right: 15px;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 4px;
+      padding-bottom: 10px;
       right: 15px;
     }
     svg {

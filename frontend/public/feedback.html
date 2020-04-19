@@ -75,47 +75,56 @@
         </header>
         <div class="banner" style="background-image: url('/img/banner_feedback.jpg');">
           <div class="container">
-            <div class="banner_wrapper"></div>
+            <div class="banner_wrapper pos-rel">
+            </div>
           </div>
         </div>
     <div class="content">
-      <div class="container">
-        <div class="row justify-content-between">
-          <form class="col-12 col-md-6" method="post" novalidate data-type="feedback_form">
-            <fieldset class="mb-2">
-              <div class="input">
-                <input type="text" name="name" placeholder=" ">
-                <label>Ваше имя</label><span data-valmsg-for="name"></span>
+      <div class="container my-1 my-lg-4 py-2">
+        <div class="row justify-content-center">
+          <div class="col-10 col sm-12">
+            <div class="row justify-content-between">
+              <div class="col-12 col-md-6">
+                <form method="post" novalidate data-type="feedback_form">
+                  <fieldset class="mb-2">
+                    <div class="input">
+                      <input type="text" name="name" placeholder=" ">
+                      <label>Ваше имя</label><span data-valmsg-for="name"></span>
+                    </div>
+                    <div class="input">
+                      <input type="email" name="email" required="required" placeholder=" ">
+                      <label>E-mail<span class="has-text-primary">*</span></label><span data-valmsg-for="email"></span>
+                    </div>
+                    <div class="input">
+                      <textarea name="message" rows="8" required="required" placeholder=" "></textarea>
+                      <label>Ваш отзыв<span class="has-text-primary">*</span></label><span data-valmsg-for="message"></span>
+                    </div>
+                  </fieldset>
+                  <div class="mt-2 mt-lg-3"><small class="has-text-primary">* - обязательное поле для заполнения</small>
+                    <div class="row justify-content-center mt-2 mt-lg-3">
+                      <button class="btn btn-general">отправить</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="input">
-                <input type="email" name="email" required="required" placeholder=" ">
-                <label>E-mail<span class="has-text-primary">*</span></label><span data-valmsg-for="email"></span>
+              <div class="feedback_text col-12 col-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                <h1 class="mb-3 mb-lg-4">Мы всегда на связи</h1>
+                <p class="pr-0 pr-xl-5">Здесь Вы можете задать нам вопрос, отправить сообщение или оставить отзыв. Мы благодарны за любую обратную связь. Спасибо, что помогаете нам становиться лучше.</p>
+                <p><a href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a><br><a href="tel:+79009009009">8 900 900 90 09</a></p>
               </div>
-              <div class="input">
-                <textarea name="message" rows="7" required="required" placeholder=" "></textarea>
-                <label>Ваш отзыв<span class="has-text-primary">*</span></label><span data-valmsg-for="message"></span>
-              </div>
-            </fieldset><small class="has-text-primary">* - обязательное поле для заполнения</small>
-            <div class="row justify-content-center mt-3">
-              <button class="btn btn-general">отправить</button>
             </div>
-          </form>
-          <div class="col-12 col-md-6 col-lg-5">
-            <h1>Мы всегда на связи</h1>
-            <p>Здесь Вы можете задать нам вопрос, отправить сообщение или оставить отзыв. Мы благодарны за любую обратную связь. Спасибо, что помогаете нам становиться лучше.</p>
-            <p><a href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a><br><a href="tel:+79009009009">8 900 900 90 09</a></p>
           </div>
         </div>
       </div>
     </div>
     <footer>
-      <div class="container py-5">
+      <div class="container py-4 py-lg-5">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10">
             <div class="row align-items-center justify-content-between">
-              <div class="col-6 col-md-3"><a href="/feedback.html">Связаться с нами</a><a class="d-block d-md-none" href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
-              <div class="col-3 d-none d-md-block"><a href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
-              <div class="social col-3 row justify-content-end">
+              <div class="col-6 col-md-4 col-lg-3"><a href="/feedback.html">Связаться с нами</a><a class="d-block d-md-none" href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
+              <div class="col-4 col-lg-3 d-none d-md-block"><a href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
+              <div class="social col-6 col-md-4 col-lg-3 row justify-content-end">
                 <div class="col-12 row align-items-center justify-content-between"><a class="social_item svg d-block" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005.89 846.99">
 <path d="M535.64,664.17c-8.71,8.4-17.21,16.59-25.7,24.8c-27.68,26.75-55.16,53.72-83.13,80.17
 	c-11.81,11.16-25.3,20.11-41.64,23.63c-2.57,0.55-5.24,0.66-8.64,1.06c0.44-6.7,0.8-12.94,1.28-19.17

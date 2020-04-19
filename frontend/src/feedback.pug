@@ -7,36 +7,21 @@ block content
     include blocks/header
     +header('feedback')
     include blocks/banner
-    +banner('banner_feedback.jpg', false)
+    +banner('banner_feedback.jpg', false, null)
     .content
-        .container
-            .row.justify-content-between
-                form(method='post', novalidate, data-type='feedback_form').col-12.col-md-6
-                    fieldset.mb-2
-                        .input
-                            input(type='text', name='name', placeholder=' ')
-                            label Ваше имя
-                            span(data-valmsg-for='name')
-                        .input
-                            input(type='email', name='email', required='required', placeholder=' ')
-                            label E-mail
-                                span.has-text-primary *
-                            span(data-valmsg-for='email')
-                        .input
-                            textarea(name='message', rows='7', required='required', placeholder=' ')
-                            label Ваш отзыв
-                                span.has-text-primary *
-                            span(data-valmsg-for='message')
-                    small.has-text-primary * - обязательное поле для заполнения
-                    .row.justify-content-center.mt-3
-                        button.btn.btn-general отправить
-                .col-12.col-md-6.col-lg-5
-                    h1 Мы всегда на связи
-                    p Здесь Вы можете задать нам вопрос, отправить сообщение или оставить отзыв. Мы благодарны за любую обратную связь. Спасибо, что помогаете нам становиться лучше.
-                    p
-                        a(href='mailto:mail@drivecoffee.ru') mail@drivecoffee.ru
-                        br
-                        a(href='tel:+79009009009') 8 900 900 90 09
+        .container.my-1.my-lg-4.py-2
+            .row.justify-content-center
+                .col-10.col.sm-12
+                    .row.justify-content-between
+                        .col-12.col-md-6
+                            include blocks/form_feedback
+                        .feedback_text.col-12.col-md-5.mt-4.mt-sm-0.pt-2.pt-sm-0
+                            h1.mb-3.mb-lg-4 Мы всегда на связи
+                            p.pr-0.pr-xl-5 Здесь Вы можете задать нам вопрос, отправить сообщение или оставить отзыв. Мы благодарны за любую обратную связь. Спасибо, что помогаете нам становиться лучше.
+                            p
+                                a(href='mailto:mail@drivecoffee.ru') mail@drivecoffee.ru
+                                br
+                                a(href='tel:+79009009009') 8 900 900 90 09
     include blocks/footer
 
 block body_end

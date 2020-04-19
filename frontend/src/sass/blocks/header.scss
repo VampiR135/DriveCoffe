@@ -19,6 +19,9 @@ header {
     @include media-breakpoint-down(lg) {
       padding: 12px 0;
     }
+    @include media-breakpoint-down(sm) {
+      padding: 13px 0;
+    }
   }
   &_menu {
     width: calc((100% - (16.7% + 100px)) / 2);
@@ -58,6 +61,10 @@ header {
         width: 0;
         transition: width 400ms;
         background-color: $white;
+
+        @include media-breakpoint-down(md) {
+          bottom: 3px;
+        }
       }
       &:hover {
         color: $primary !important;
@@ -101,13 +108,16 @@ header {
           margin: 10px auto;
           background-color: $primary;
         }
+        &.active {
+          color: $primary;
+        }
       }
     }
     &_switcher {
       position: absolute;
       top: 50%;
-      right: 20%;
-      width: 22px;
+      right: 13.3%;
+      width: 18px;
       padding-bottom: 16px;
       margin: -8px 0;
       cursor: pointer;
@@ -124,7 +134,7 @@ header {
       width: 15%;
     }
     @include media-breakpoint-down(sm) {
-      width: 140px;
+      width: 110px;
     }
     .svg {
       padding-bottom: 20%;
@@ -157,7 +167,7 @@ header {
     padding: 15px 0;
 
     @include media-breakpoint-down(lg) {
-      padding: 10px 0;
+      padding: 5px 0;
     }
   }
   &--fixed &_menu {

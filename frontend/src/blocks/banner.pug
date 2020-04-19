@@ -1,13 +1,9 @@
-mixin banner(img, logo)
-    if logo
-        div.banner.banner_home(style=`background-image: url('/img/${img}');`)
-            .container
-                .banner_wrapper.pos-rel
+mixin banner(img, logo, id)
+    .banner(style=`background-image: url('/img/${img}');`, class=id ? `banner_${id}` : '')
+        .container
+            .banner_wrapper.pos-rel
+                if logo
                     .banner_content
                         .banner_logo.svg
                             include ../img/logo.svg
                         .banner_slogan есть идея выпить кофе
-    else
-        div.banner(style=`background-image: url('/img/${img}');`)
-            .container
-                .banner_wrapper

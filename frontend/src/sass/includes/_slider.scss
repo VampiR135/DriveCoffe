@@ -18,6 +18,12 @@
     height: 9px;
     margin: 0 9px;
   }
+  @include media-breakpoint-down(sm) {
+    width: 7px;
+    height: 7px;
+    margin: 0 8px;
+    border-width: 1px;
+  }
 }
 .swiper-pagination-bullet-active {
   background: $primary;

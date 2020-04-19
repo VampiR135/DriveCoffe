@@ -10,13 +10,22 @@
       width: 210px;
       padding-bottom: 210px;
     }
-    &__small .home_slider_description{
+    @include media-breakpoint-down(sm) {
+      width: 168px;
+      padding-bottom: 168px;
+    }
+    &__small .home_slider_description {
       font-size: rem(14);
       line-height: rem(20);
 
       @include media-breakpoint-down(md) {
         font-size: rem(10);
         line-height: rem(11);
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: rem(9);
+        line-height: rem(9);
+        margin-right: -10%;
       }
     }
   }
@@ -53,11 +62,18 @@
       font-size: rem(13);
       line-height: rem(15);
     }
+    @include media-breakpoint-down(sm) {
+      font-size: rem(10);
+      line-height: rem(12);
+    }
     p:not(.home_slider_name) {
       margin-bottom: rem(13);
 
       @include media-breakpoint-down(md) {
         margin-bottom: rem(10);
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: rem(6);
       }
       &:last-child {
         margin-bottom: 0;
@@ -77,6 +93,11 @@
       line-height: rem(10);
       margin-bottom: 5.5%;
     }
+    @include media-breakpoint-down(sm) {
+      font-size: rem(8);
+      line-height: rem(8);
+      margin-bottom: 6%;
+    }
     span {
       position: relative;
       display: inline-block;
@@ -88,6 +109,10 @@
         font-size: rem(12);
         line-height: rem(12);
       }
+      @include media-breakpoint-down(sm) {
+        font-size: rem(9);
+        line-height: rem(9);
+      }
       &:before,
       &:after {
         content: '';
@@ -98,6 +123,10 @@
         margin: -1px 0;
         background-color: $primary;
         transition: all 500ms;
+
+        @include media-breakpoint-down(md) {
+          height: 1px;
+        }
       }
       &:before {
         right: calc(100% + 50px);
@@ -124,23 +153,23 @@
 
 
   .swiper-slide-active &_img {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       filter: blur(5px);
     }
   }
   .swiper-slide-active &_text {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       opacity: 1;
     }
     visibility: visible;
   }
   .swiper-slide-active &_name span:before {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       right: calc(100% + 10px);
     }
   }
   .swiper-slide-active &_name span:after {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       left: calc(100% + 10px);
     }
   }

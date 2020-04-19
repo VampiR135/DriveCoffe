@@ -16,6 +16,16 @@
 .content {
   padding: rem(30) 0;
   min-height: calc(100vh - (465px + 150px));
+
+  @include media-breakpoint-down(lg) {
+    min-height: calc(100vh - (314px + 153px));
+  }
+  @include media-breakpoint-down(md) {
+    min-height: calc(100vh - (277px + 83px));
+  }
+  @include media-breakpoint-down(sm) {
+    min-height: calc(100vh - (222px + 103px));
+  }
 }
 
 a {
@@ -29,9 +39,19 @@ a {
 }
 
 h1 {
-  font-size: rem(32);
-  line-height: rem(42);
-  margin: 0 0 20px;
+  font-size: rem(34);
+  line-height: rem(40);
+  margin: 0;
+  font-weight: normal;
+
+  @include media-breakpoint-down(lg) {
+    font-size: rem(26);
+    line-height: rem(32);
+  }
+  @include media-breakpoint-down(md) {
+    font-size: rem(20);
+    line-height: rem(26);
+  }
 }
 
 p {
@@ -60,4 +80,14 @@ img {
 }
 .overflow-visible {
   overflow: visible !important;
+}
+
+small {
+  font-size: rem(14);
+  line-height: rem(18);
+
+  @include media-breakpoint-down(md) {
+    font-size: rem(12);
+    line-height: rem(16);
+  }
 }

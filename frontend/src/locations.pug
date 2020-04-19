@@ -6,10 +6,10 @@ block content
     include blocks/header
     +header('locations')
     include blocks/banner
-    +banner('banner_locations.jpg', false)
-    .content.pb-0
+    +banner('banner_locations.jpg', false, null)
+    .content.pb-0.pt-4.pt-lg-5.mt-2
         include blocks/locations_list
-        .map-container.mt-5
+        .map-container.mt-1.mt-lg-5
             #map
     include blocks/footer
 

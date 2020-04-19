@@ -35,9 +35,9 @@
     ]
 
 .locations_list.container
-    .row.d-none.d-md-flex.justify-content-between
+    .row.no-gutters.d-none.d-md-flex.justify-content-between
         for location in locationsList
-            .locations_list_item(data-id=location.id)
+            .locations_list_item.mb-4(data-id=location.id)
                 .locations_list_item_img(style=`background-image: url('/img/${location.img}');`)
                 .locations_list_item_text
                     .locations_list_item_name=location.name
@@ -47,9 +47,18 @@
                             |:&#160;
                         if location.time
                             | #{location.time}
-    .d-md-none
+    .d-md-none.mb-3
         .swiper-container.locations_slider
             .swiper-wrapper
                 for location in locationsList
-                    .swiper-slide(style=`width: 350px; height: 350px; text-align: center; background-image: url('/img/${location.img}');`, data-id=location.id)
+                    .swiper-slide.locations_list_item(data-id=location.id)
+                        .locations_list_item_img(style=`background-image: url('/img/${location.img}');`)
+                        .locations_list_item_text
+                            .locations_list_item_name=location.name
+                            .locations_list_item_address
+                                p=location.address
+                                span.has-text-primary=location.date
+                                | :&#160;
+                                if location.time
+                                    | #{location.time}
         .swiper-pagination.locations_slider_pagination.mt-3

@@ -1,3 +1,10 @@
+if (!String.prototype.startsWith) {
+	String.prototype.startsWith = function(searchString, position) {
+		position = position || 0;
+		return this.indexOf(searchString, position) === position;
+	};
+}
+
 window.onload = function (container, options) {
 
 	function checkFixedHeader() {
@@ -36,6 +43,7 @@ window.onload = function (container, options) {
 		const home_slider = new Swiper('.home_slider', {
 			loop: true,
 			slidesPerView: 'auto',
+			spaceBetween: 30,
 			centeredSlides: true,
 			slideToClickedSlide: true,
 			pagination: {
@@ -43,16 +51,7 @@ window.onload = function (container, options) {
 				clickable: true,
 			},
 			breakpoints: {
-				576: {
-					slidesPerView: 1,
-					spaceBetween: 20
-				},
-				768: {
-					spaceBetween: 30
-				},
-				992: {
-					spaceBetween: 30
-				}
+				576: {}
 			}
 		});
 	}

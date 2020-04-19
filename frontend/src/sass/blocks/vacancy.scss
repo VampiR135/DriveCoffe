@@ -1,0 +1,14 @@
+.vacancy {
+
+  @include media-breakpoint-down(md) {
+    font-size: rem(14);
+    line-height: rem(20);
+  }
+  p {
+    margin-bottom: 24px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 16px;
+    }
+  }
+}

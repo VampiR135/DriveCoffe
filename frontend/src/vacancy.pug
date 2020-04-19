@@ -6,61 +6,16 @@ block content
     include blocks/header
     +header('vacancy')
     include blocks/banner
-    +banner('banner_vacancy.jpg', false)
-    .content
-        .container
-            h1 Cильная команда начинается с&#160;единомышленников!
-            p Поэтому если ты, так&#160;же как и&#160;мы, любишь кофе и&#160;все, что с&#160;ним связано, желаешь добиться больших результатов, а&#160;ответственность, дружелюбность и&#160;уверенность в&#160;себе - твои главные черты, то&#160;приглашаем тебя стать частью Drive Coffee.
-            p.has-text-primary.mb-5 Просто заполни форму, и мы обязательно свяжемся с&#160;тобой в&#160;течение недели:
-            form(method='post', novalidate, data-type='vacancy_form').row.justify-content-between
-                .col-12.col-md-6.mb-3.mb-lg-0
-                    fieldset
-                        .input
-                            input(type='text', name='name', required='required', placeholder=' ')
-                            label Ваше имя
-                                span.has-text-primary *
-                            span(data-valmsg-for='name')
-                        .input
-                            input(type='text', name='phone', required='required', placeholder=' ', title='8(900)200-3344', pattern='[0-9][(][0-9]{3}[)] [0-9]{3}-[0-9]{4}', data-phone)
-                            label Телефон
-                                span.has-text-primary *
-                            span(data-valmsg-for='phone')
-                        .input
-                            input(type='email', name='email', required='required', placeholder=' ')
-                            label E-mail
-                                span.has-text-primary *
-                            span(data-valmsg-for='email')
-                        .input
-                            textarea(name='experience', rows='7', required='required', placeholder=' ')
-                            label Опыт работы с кофе, другими напитками или едой
-                                span.has-text-primary *
-                            span(data-valmsg-for='experience')
-                .col-12.col-md-6
-                    fieldset
-                        .input
-                            input(type='text', name='old', required='required', placeholder=' ')
-                            label Возраст
-                                span.has-text-primary *
-                            span(data-valmsg-for='old')
-                        .input
-                            input(type='text', name='education', required='required', placeholder=' ')
-                            label Образование
-                                span.has-text-primary *
-                            span(data-valmsg-for='education')
-                        .input
-                            input(type='text', name='salary', required='required', placeholder=' ')
-                            label Желаемая заработная плата в месяц
-                                span.has-text-primary *
-                            span(data-valmsg-for='salary')
-                        .input
-                            textarea(name='info', rows='7', required='required', placeholder=' ')
-                            label Как узнал(-а) о Drive Coffee
-                                span.has-text-primary *
-                            span(data-valmsg-for='info')
-                .col-12
-                    small.has-text-primary * - обязательное поле для заполнения
-                    .row.justify-content-center
-                        button.btn.btn-general отправить
+    +banner('banner_vacancy.jpg', false, null)
+    .content.vacancy
+        .container.my-2.my-lg-3.py-0.py-lg-3
+            .row.justify-content-center
+                .col-10.col-sm-12
+                    h1.mb-3.mb-lg-4 Сильная команда начинается с&#160;единомышленников!
+                    p Поэтому если ты, так&#160;же как и&#160;мы, любишь кофе и&#160;все, что с&#160;ним связано, желаешь добиться больших результатов, а&#160;ответственность, дружелюбность и&#160;уверенность в&#160;себе - твои главные черты, то&#160;приглашаем тебя стать частью Drive Coffee.
+                    p.has-text-primary Просто заполни форму, и мы обязательно свяжемся с&#160;тобой в&#160;течение недели:
+                    .mt-4
+                        include blocks/form_vacancy
     include blocks/footer
 
 block body_end

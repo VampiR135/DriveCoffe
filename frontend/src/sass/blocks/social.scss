@@ -1,10 +1,21 @@
 .social {
   width: rem(185);
 
+  &,
+  & > * {
+
+    @include media-breakpoint-down(md) {
+      margin: 0;
+    }
+  }
   &_item {
     width: rem(33);
     padding-bottom: rem(33);
 
+    @include media-breakpoint-down(md) {
+      width: rem(20);
+      padding-bottom: rem(20);
+    }
     svg {
       fill: $white;
       transition: fill 300ms;

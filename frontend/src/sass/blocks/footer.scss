@@ -4,6 +4,13 @@ footer {
   a {
     color: $white !important;
 
+    @include media-breakpoint-down(md) {
+      font-size: rem(12);
+      line-height: rem(12);
+    }
+    @include media-breakpoint-down(md) {
+      line-height: rem(20);
+    }
     &:hover {
       color: $primary !important;
     }

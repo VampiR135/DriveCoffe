@@ -20,16 +20,16 @@
 include social_links
 
 footer
-    .container.py-5
+    .container.py-4.py-lg-5
         .row.justify-content-center
             .col-12.col-md-10
                 .row.align-items-center.justify-content-between
-                    .col-6.col-md-3
+                    .col-6.col-md-4.col-lg-3
                         a(href='/feedback.html') Связаться с нами
                         a(href='mailto:mail@drivecoffee.ru').d-block.d-md-none mail@drivecoffee.ru
-                    .col-3.d-none.d-md-block
+                    .col-4.col-lg-3.d-none.d-md-block
                         a(href='mailto:mail@drivecoffee.ru') mail@drivecoffee.ru
-                    .social.col-3.row.justify-content-end
+                    .social.col-6.col-md-4.col-lg-3.row.justify-content-end
                         .col-12.row.align-items-center.justify-content-between
                             for item in cosialList
                                 a(href=item.link).social_item.svg.d-block

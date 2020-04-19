@@ -1,0 +1,49 @@
+form(method='post', novalidate, data-type='vacancy_form').row.justify-content-between
+    .col-12.col-md-6.mb-3.mb-lg-0
+        fieldset
+            .input
+                input(type='text', name='name', required='required', placeholder=' ')
+                label Ваше имя
+                    span.has-text-primary *
+                span(data-valmsg-for='name')
+            .input
+                input(type='text', name='phone', required='required', placeholder=' ', title='8(900)200-3344', pattern='[0-9][(][0-9]{3}[)] [0-9]{3}-[0-9]{4}', data-phone)
+                label Телефон
+                    span.has-text-primary *
+                span(data-valmsg-for='phone')
+            .input
+                input(type='email', name='email', required='required', placeholder=' ')
+                label E-mail
+                    span.has-text-primary *
+                span(data-valmsg-for='email')
+            .input
+                textarea(name='experience', rows='5', required='required', placeholder=' ')
+                label Опыт работы с кофе, другими напитками или едой
+                    span.has-text-primary *
+                span(data-valmsg-for='experience')
+    .col-12.col-md-6
+        fieldset
+            .input
+                input(type='text', name='old', required='required', placeholder=' ')
+                label Возраст
+                    span.has-text-primary *
+                span(data-valmsg-for='old')
+            .input
+                input(type='text', name='education', required='required', placeholder=' ')
+                label Образование
+                    span.has-text-primary *
+                span(data-valmsg-for='education')
+            .input
+                input(type='text', name='salary', required='required', placeholder=' ')
+                label Желаемая заработная плата в месяц
+                    span.has-text-primary *
+                span(data-valmsg-for='salary')
+            .input
+                textarea(name='info', rows='5', required='required', placeholder=' ')
+                label Как узнал(-а) о Drive Coffee
+                    span.has-text-primary *
+                span(data-valmsg-for='info')
+    .col-12.mt-2.mt-sm-0.mt-lg-3
+        small.has-text-primary * - обязательное поле для заполнения
+        .row.justify-content-center.mt-2.mt-lg-4
+            button.btn.btn-general отправить
