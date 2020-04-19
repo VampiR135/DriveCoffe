@@ -1,0 +1,46 @@
+version: '2'
+
+services:
+
+  nginx:
+    restart: always
+    image: dimka2014/nginx-upload-with-progress-modules:latest
+    container_name: nginx
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./src:/src
+      - ./config/nginx:/etc/nginx/conf.d
+      - ./src/static:/static
+      - ./src/media:/media/
+      - ./config/passwd:/etc/passwd
+      - ./config/group:/etc/group
+    depends_on:
+      - web
+
+  postgresql:
+    restart: always
+    image: postgres:10.5
+    container_name: postgresql
+    command: postgres -c 'max_connections=1000'
+    env_file: .env
+    volumes:
+      - /srv/pgdata:/var/lib/postgresql/data/pgdata
+    ports:
+      - "127.0.0.1:5432:5432"
+
+  web:
+    restart: always
+    build: .
+    command: /bin/bash -c "pip install -r requirements.txt; python manage.py migrate; python manage.py collectstatic --no-input; gunicorn -w 4 --bind :8003 --timeout 300000 --reload -u 48 -g 551 -m 0002 --chdir /src --pid=/tmp/project.pid --worker-class gevent wsgi:application "
+    container_name: web
+    env_file: .env
+    volumes:
+      - ./src:/src
+    ports:
+      - "127.0.0.1:8000:8000"
+    links:
+      - postgresql
+    depends_on:
+      - postgresql
+
