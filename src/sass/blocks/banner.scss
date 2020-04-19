@@ -1,0 +1,55 @@
+.banner {
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 135px;
+    z-index: 1;
+  }
+  &:before {
+    top: 0;
+    background: linear-gradient(hsla(0, 0%, 0%, 30%), hsla(0, 0%, 0%, 0%));
+  }
+  &:after {
+    bottom: 0;
+    background: linear-gradient(hsla(0, 0%, 0%, 0%), hsla(0, 0%, 0%, 20%));
+  }
+  &_wrapper {
+    padding-bottom: 465px;
+  }
+  &_home &_wrapper {
+    padding-bottom: 860px;
+  }
+  &_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  &_logo {
+    width: 726px;
+    padding-bottom: 103px;
+    margin: 0 auto;
+
+    svg {
+      fill: $white;
+    }
+  }
+  &_slogan {
+    text-align: center;
+    text-align-last: center;
+    color: $white;
+    margin-top: 2rem;
+    font-size: rem(30);
+    line-height: rem(30);
+    font-family: $font-alternative;
+  }
+}

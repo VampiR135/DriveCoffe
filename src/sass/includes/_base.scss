@@ -1,0 +1,32 @@
+@each $name, $value in $colorList {
+  .has-background-#{$name} {
+    background-color: $value;
+  }
+}
+
+@each $name, $value in $fontColors {
+  .has-text-#{$name} {
+    color: $value;
+  }
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  font-size: #{$base-font-size}px;
+  line-height: #{$base-line-height}px;
+  font-family: $font-general;
+}
+body {
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}

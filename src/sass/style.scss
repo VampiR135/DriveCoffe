@@ -1,0 +1,21 @@
+@import 'includes/variables';
+@import 'includes/mixin';
+@import 'includes/bs-grid/grid';
+@import 'includes/base';
+@import 'includes/common';
+@import 'includes/fonts';
+@import 'includes/forms';
+@import 'includes/buttons';
+
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/components/pagination/pagination';
+@import 'includes/slider';
+
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/banner';
+@import 'blocks/social';
+@import 'blocks/map';
+@import 'blocks/home';
+@import 'blocks/toastify';
+@import 'blocks/locations_list';

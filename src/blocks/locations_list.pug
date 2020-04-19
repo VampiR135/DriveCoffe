@@ -1,0 +1,55 @@
+-
+    const locationsList = [
+        {
+            'id': 0,
+            'name': 'Drive Coffee Vega',
+            'address': 'ул. Юбилейная, 40г',
+            'date': 'ПН-ВС',
+            'time': '8:00 - 00:00',
+            'img': 'location_1.jpg'
+        },
+        {
+            'id': 1,
+            'name': 'Drive Coffee Komsa',
+            'address': 'ул. Коммунистическая, 92г',
+            'date': 'ПН-ВС',
+            'time': '8:00 - 22:00',
+            'img': 'location_1.jpg'
+        },
+        {
+            'id': 2,
+            'name': 'Drive Coffee ParkHouse/Lime',
+            'address': 'ул. Автозаводское шоссе, 10в',
+            'date': 'ПН-ВС',
+            'time': '8:00 - 22:00',
+            'img': 'location_1.jpg'
+        },
+        {
+            'id': 3,
+            'name': 'Drive Coffee Naba',
+            'address': 'закрыто',
+            'date': 'Работаем с мая по август',
+            'time': null,
+            'img': 'location_1.jpg'
+        },
+    ]
+
+.locations_list.container
+    .row.d-none.d-md-flex.justify-content-between
+        for location in locationsList
+            .locations_list_item(data-id=location.id)
+                .locations_list_item_img(style=`background-image: url('/img/${location.img}');`)
+                .locations_list_item_text
+                    .locations_list_item_name=location.name
+                    .locations_list_item_address
+                        p=location.address
+                        span.has-text-primary=location.date
+                            |:&#160;
+                        if location.time
+                            | #{location.time}
+    .d-md-none
+        .swiper-container.locations_slider
+            .swiper-wrapper
+                for location in locationsList
+                    .swiper-slide(style=`width: 350px; height: 350px; text-align: center; background-image: url('/img/${location.img}');`, data-id=location.id)
+        .swiper-pagination.locations_slider_pagination.mt-3

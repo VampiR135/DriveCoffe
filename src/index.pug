@@ -1,0 +1,18 @@
+extends _layouts/base
+
+block head_end
+
+
+block content
+	include blocks/header
+	+header()
+	include blocks/banner
+	+banner('banner_home.jpg', true)
+	.content.py-5
+		include blocks/home_slogan
+		include blocks/home_slider
+	include blocks/footer
+
+block body_end
+	script(type="text/javascript" src="/js/vendor/swiper.min.js")
+	script(type="text/javascript" src="/js/script.js")

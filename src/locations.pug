@@ -1,0 +1,19 @@
+extends _layouts/base
+
+block head_end
+
+block content
+    include blocks/header
+    +header('locations')
+    include blocks/banner
+    +banner('banner_locations.jpg', false)
+    .content.pb-0
+        include blocks/locations_list
+        .map-container.mt-5
+            #map
+    include blocks/footer
+
+block body_end
+    script(type="text/javascript", src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2b2d4982-b472-484f-aa96-96e74f56d67f")
+    script(type="text/javascript" src="/js/vendor/swiper.min.js")
+    script(type="text/javascript" src="/js/script.js")

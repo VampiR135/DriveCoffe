@@ -1,0 +1,22 @@
+mixin header(active)
+    header
+        .container
+            div.row.align-items-center.justify-content-center.justify-content-md-between.no-gutters
+                div.header_menu.row.align-items-center.justify-content-around.d-none.d-md-flex
+                    a(href='/locations.html', class=active==='locations' ? 'active' : '') Локации
+                    a(href='/vacancy.html', class=active==='vacancy' ? 'active' : '') Вакансии
+                    //a(href='/partners.html', class=active==='partners' ? 'active' : '') Партнерам
+                a.header_logo.d-block(href='/')
+                    .svg
+                        include ../img/logo.svg
+                div.header_menu.row.align-items-center.justify-content-between.d-none.d-md-flex
+                    a(href='/loyalty.html', class=active==='loyalty' ? 'active' : '') Программа лояльности
+                    a(href='/feedback.html', class=active==='feedback' ? 'active' : '') Открыть кофейню
+            div.header_menu--mobile.flex-column.align-items-center.justify-content-center.d-flex.d-md-none
+                a(href='/locations.html', class=active === 'locations' ? 'active' : '') Локации
+                a(href='/vacancy.html', class=active === 'vacancy' ? 'active' : '') Вакансии
+                //a(href='/partners.html', class=active==='partners' ? 'active' : '') Партнерам
+                a(href='/loyalty.html', class=active === 'loyalty' ? 'active' : '') Программа лояльности
+                a(href='/feedback.html', class=active === 'feedback' ? 'active' : '') Открыть кофейню
+        .header_menu_switcher.svg.d-md-none
+            include ../img/menu.svg

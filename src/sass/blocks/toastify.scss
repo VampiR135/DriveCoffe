@@ -1,0 +1,19 @@
+.toastify_message {
+  color: $black;
+  white-space: nowrap;
+  cursor: default;
+  z-index: 100;
+
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    text-align-last: center;
+    padding: 2%;
+  }
+}
+.toastify-top {
+  @include media-breakpoint-down(md) {
+    top: 49px !important;
+  }
+}

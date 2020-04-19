@@ -1,0 +1,17 @@
+extends _layouts/base
+
+block head_end
+
+
+block content
+    include blocks/header
+    +header('partners')
+    include blocks/banner
+    +banner('banner_partners.jpg', false)
+    .content
+        .container
+            h1 Страница для партнёров.
+    include blocks/footer
+
+block body_end
+    script(type="text/javascript" src="/js/script.js")

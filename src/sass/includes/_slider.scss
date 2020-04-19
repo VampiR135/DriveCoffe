@@ -1,0 +1,17 @@
+.swiper-pagination {
+  width: 100%;
+  position: relative;
+}
+.swiper-pagination-bullet {
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: 2px solid $primary;
+  opacity: 1;
+  margin: 0 15px;
+  outline: none !important;
+}
+.swiper-pagination-bullet-active {
+  background: $primary;
+}

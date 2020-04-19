@@ -1,0 +1,41 @@
+.social {
+  width: rem(185);
+
+  &_item {
+    width: rem(33);
+    padding-bottom: rem(33);
+
+    svg {
+      fill: $white;
+      transition: fill 300ms;
+      overflow: visible;
+
+      * {
+        transition: 300ms;
+        stroke: $white;
+        stroke-width: 0;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
+    &:hover {
+      svg {
+        * {
+          stroke-width: 50;
+        }
+      }
+    }
+    &:focus,
+    &:active {
+      svg {
+        transition: fill 150ms;
+        fill: $primary;
+
+        * {
+          stroke: $primary;
+          stroke-width: 50;
+        }
+      }
+    }
+  }
+}

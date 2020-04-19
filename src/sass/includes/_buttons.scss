@@ -1,0 +1,58 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  min-width: rem(190);
+  padding: rem(19) rem(30);
+  font-size: rem(22);
+  line-height: rem(22);
+  font-family: $font-general;
+  text-align: center;
+  text-align-last: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: none;
+  border-radius: rem(30);
+  border: 1px solid transparent;
+  transition: all 300ms;
+  background-color: transparent;
+  outline: none;
+
+  @include media-breakpoint-down(lg) {
+    min-width: rem(190);
+    padding: rem(12) rem(15);
+    font-size: rem(20);
+    line-height: rem(20);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  .svg {
+    position: absolute;
+    width: 10px;
+    padding-bottom: 20px;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+
+    svg {
+      fill: $black;
+      transition: fill 300ms;
+    }
+  }
+  &-general {
+    border-color: $primary;
+    color: $primary;
+
+    .svg svg {
+      fill: $primary;
+    }
+    &:hover {
+      background-color: $primary;
+      color: $white;
+
+      .svg svg {
+        fill: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+-
+    const cosialList = [
+        {
+            icon: 'social_1',
+            link: '#'
+            // link: 'http://t.me/sanbrov'
+        },
+        {
+            icon: 'social_2',
+            link: '#'
+            // link: 'https://vk.com/drivecoffeetlt'
+        },
+        {
+            icon: 'social_3',
+            link: '#'
+            // link: 'https://www.instagram.com/drivecoffeetlt/'
+        },
+    ];
+
+include social_links
+
+footer
+    .container
+        .row.justify-content-center
+            .col-12.col-md-10
+                .row.align-items-center.justify-content-between
+                    .col-6.col-md-3
+                        a(href='/feedback.html') Связаться с нами
+                        a(href='mailto:mail@drivecoffee.ru').d-block.d-md-none mail@drivecoffee.ru
+                    .col-3.d-none.d-md-block
+                        a(href='mailto:mail@drivecoffee.ru') mail@drivecoffee.ru
+                    .social.row.align-items-center.justify-content-between
+                        for item in cosialList
+                            a(href=item.link).social_item.svg.d-block
+                                +social-link(item.icon)
