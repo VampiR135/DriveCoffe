@@ -74,13 +74,14 @@
         </header>
         <div class="banner" style="background-image: url('/static/img/banner_locations.jpg');">
           <div class="container">
-            <div class="banner_wrapper"></div>
+            <div class="banner_wrapper pos-rel">
+            </div>
           </div>
         </div>
-    <div class="content pb-0">
+    <div class="content pb-0 pt-4 pt-lg-5 mt-2">
       <div class="locations_list container">
-        <div class="row d-none d-md-flex justify-content-between">
-          <div class="locations_list_item" data-id="0">
+        <div class="row no-gutters d-none d-md-flex justify-content-between">
+          <div class="locations_list_item mb-4" data-id="0">
             <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
             <div class="locations_list_item_text">
               <div class="locations_list_item_name">Drive Coffee Vega</div>
@@ -89,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div class="locations_list_item" data-id="1">
+          <div class="locations_list_item mb-4" data-id="1">
             <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
             <div class="locations_list_item_text">
               <div class="locations_list_item_name">Drive Coffee Komsa</div>
@@ -98,7 +99,7 @@
               </div>
             </div>
           </div>
-          <div class="locations_list_item" data-id="2">
+          <div class="locations_list_item mb-4" data-id="2">
             <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
             <div class="locations_list_item_text">
               <div class="locations_list_item_name">Drive Coffee ParkHouse/Lime</div>
@@ -107,7 +108,7 @@
               </div>
             </div>
           </div>
-          <div class="locations_list_item" data-id="3">
+          <div class="locations_list_item mb-4" data-id="3">
             <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
             <div class="locations_list_item_text">
               <div class="locations_list_item_name">Drive Coffee Naba</div>
@@ -117,30 +118,62 @@
             </div>
           </div>
         </div>
-        <div class="d-md-none">
+        <div class="d-md-none mb-3">
           <div class="swiper-container locations_slider">
             <div class="swiper-wrapper">
-              <div class="swiper-slide" style="width: 350px; height: 350px; text-align: center; background-image: url('/static/img/location_1.jpg');" data-id="0"></div>
-              <div class="swiper-slide" style="width: 350px; height: 350px; text-align: center; background-image: url('/static/img/location_1.jpg');" data-id="1"></div>
-              <div class="swiper-slide" style="width: 350px; height: 350px; text-align: center; background-image: url('/static/img/location_1.jpg');" data-id="2"></div>
-              <div class="swiper-slide" style="width: 350px; height: 350px; text-align: center; background-image: url('/static/img/location_1.jpg');" data-id="3"></div>
+              <div class="swiper-slide locations_list_item" data-id="0">
+                <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+                <div class="locations_list_item_text">
+                  <div class="locations_list_item_name">Drive Coffee Vega</div>
+                  <div class="locations_list_item_address">
+                    <p>ул. Юбилейная, 40г</p><span class="has-text-primary">ПН-ВС</span>:&#160;8:00 - 00:00
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide locations_list_item" data-id="1">
+                <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+                <div class="locations_list_item_text">
+                  <div class="locations_list_item_name">Drive Coffee Komsa</div>
+                  <div class="locations_list_item_address">
+                    <p>ул. Коммунистическая, 92г</p><span class="has-text-primary">ПН-ВС</span>:&#160;8:00 - 22:00
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide locations_list_item" data-id="2">
+                <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+                <div class="locations_list_item_text">
+                  <div class="locations_list_item_name">Drive Coffee ParkHouse/Lime</div>
+                  <div class="locations_list_item_address">
+                    <p>ул. Автозаводское шоссе, 10в</p><span class="has-text-primary">ПН-ВС</span>:&#160;8:00 - 22:00
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide locations_list_item" data-id="3">
+                <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+                <div class="locations_list_item_text">
+                  <div class="locations_list_item_name">Drive Coffee Naba</div>
+                  <div class="locations_list_item_address">
+                    <p>закрыто</p><span class="has-text-primary">Работаем с мая по август</span>:&#160;
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="swiper-pagination locations_slider_pagination mt-3"></div>
         </div>
       </div>
-      <div class="map-container mt-5">
+      <div class="map-container mt-1 mt-lg-5">
         <div id="map"></div>
       </div>
     </div>
     <footer>
-      <div class="container py-5">
+      <div class="container py-4 py-lg-5">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10">
             <div class="row align-items-center justify-content-between">
-              <div class="col-6 col-md-3"><a href="/feedback.html">Связаться с нами</a><a class="d-block d-md-none" href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
-              <div class="col-3 d-none d-md-block"><a href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
-              <div class="social col-3 row justify-content-end">
+              <div class="col-6 col-md-4 col-lg-3"><a href="/feedback.html">Связаться с нами</a><a class="d-block d-md-none" href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
+              <div class="col-4 col-lg-3 d-none d-md-block"><a href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
+              <div class="social col-6 col-md-4 col-lg-3 row justify-content-end">
                 <div class="col-12 row align-items-center justify-content-between"><a class="social_item svg d-block" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005.89 846.99">
 <path d="M535.64,664.17c-8.71,8.4-17.21,16.59-25.7,24.8c-27.68,26.75-55.16,53.72-83.13,80.17
 	c-11.81,11.16-25.3,20.11-41.64,23.63c-2.57,0.55-5.24,0.66-8.64,1.06c0.44-6.7,0.8-12.94,1.28-19.17
@@ -208,8 +241,8 @@
       </div>
     </footer>
     <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=2b2d4982-b472-484f-aa96-96e74f56d67f"></script>
-    <script type="text/javascript" src="/js/vendor/swiper.min.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script>
+    <script type="text/javascript" src="/static/js/vendor/swiper.min.js"></script>
+    <script type="text/javascript" src="/static/js/script.js"></script>
     <!--script.-->
     <!--  window.ga = function () {ga.q.push(arguments)}; ga.q = []; ga.l = +new Date;-->
     <!--  ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview');-->
