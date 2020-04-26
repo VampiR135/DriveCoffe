@@ -9,11 +9,16 @@
     width: 100%;
     text-align: center;
     text-align-last: center;
-    padding: 2%;
+    padding: 10px 15px;
   }
 }
-.toastify-top {
-  @include media-breakpoint-down(md) {
-    top: 49px !important;
+.toastify.on {
+  top: 105px !important;
+
+  @include media-breakpoint-down(lg) {
+    top: 70px !important;
+  }
+  @include media-breakpoint-down(sm) {
+    top: 55px !important;
   }
 }
