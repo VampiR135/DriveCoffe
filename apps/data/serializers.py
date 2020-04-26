@@ -14,6 +14,6 @@ class ResponseVacancyMS(serializers.ModelSerializer):
 
     class Meta:
         model = ResponseVacancyModel
-        fields = ('id', 'name', 'email', 'text', 'phone_number', 'age', 'education', 'salary', 'experience', 'found_out')
+        fields = ('id', 'name', 'email', 'phone_number', 'age', 'education', 'salary', 'experience', 'found_out')
 
 
