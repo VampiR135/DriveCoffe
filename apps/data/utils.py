@@ -18,11 +18,10 @@ def send_email_feedback(name, email, text):
     msg.send()
 
 
-def send_email_response(name, email, text, phone_number, age, education, salary, experience, found_out):
+def send_email_response(name, email, phone_number, age, education, salary, experience, found_out):
     subject = u'Ответ на вакансию'
     ctx = {
         'name': name,
-        'text': text,
         'email': email,
         'phone_number': phone_number,
         'age': age,
