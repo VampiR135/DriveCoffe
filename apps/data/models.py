@@ -16,7 +16,7 @@ class FeedbackModel(models.Model):
 
     class Meta:
         verbose_name = _(u'Форма')
-        verbose_name_plural = _(u'Форма')
+        verbose_name_plural = _(u'Формы')
 
 
 class ResponseVacancyModel(models.Model):
@@ -36,6 +36,6 @@ class ResponseVacancyModel(models.Model):
         return u'{name}'.format(name=self.name)
 
     class Meta:
-        verbose_name = _(u'Форма')
-        verbose_name_plural = _(u'Форма')
+        verbose_name = _(u'Вакансия')
+        verbose_name_plural = _(u'Вакансии')
 
