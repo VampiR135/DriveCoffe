@@ -28,6 +28,7 @@ urlpatterns = [
     path('loyalty/', TemplateView.as_view(template_name="loyalty.html"), name='loyalty'),
     path('partners/', TemplateView.as_view(template_name="partners.html"), name='partners'),
     path('feedback/', TemplateView.as_view(template_name="feedback.html"), name='feedback'),
+    path('vacancy/', TemplateView.as_view(template_name="vacancy.html"), name='vacancy'),
     path('', TemplateView.as_view(template_name="index.html"), name='index'),
 ]
 
