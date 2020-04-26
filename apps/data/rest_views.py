@@ -32,7 +32,7 @@ class ResponseVacancyVS(mixins.CreateModelMixin, GenericViewSet):
 
     def perform_create(self, serializer):
         obj = serializer.save()
-        email = Thread(target=send_email_feedback, args=(obj.name, obj.text, obj.email, obj.phone_number,
+        email = Thread(target=send_email_feedback, args=(obj.name, obj.email, obj.phone_number,
                                                          obj.age, obj.education, obj.salary, obj.experience,
                                                          obj.found_out))
         email.start()
