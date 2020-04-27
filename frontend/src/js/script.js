@@ -98,6 +98,24 @@ window.onload = function (container, options) {
 			},[]);
 	};
 
+	// парсинг Cookie
+	function getCookie(name) {
+		let cookieValue = null;
+		if (document.cookie && document.cookie !== '') {
+			let cookies = document.cookie.split(';');
+			for (let i = 0; i < cookies.length; i++) {
+				let cookie = cookies[i].trim();
+				if (cookie.substring(0, name.length + 1) === (name + '=')) {
+					cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+					break;
+				}
+			}
+		}
+		return cookieValue;
+	}
+
+	const csrftoken = getCookie('csrftoken');
+
 	const submitForm = function (form, id) {
 		const pathList = {
 						'vacancy_form': '/api/v1/vacancy/',
@@ -113,6 +131,8 @@ window.onload = function (container, options) {
 		const request = new XMLHttpRequest();
 		request.open('POST', pathList[id], true);
 		request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+		request.setRequestHeader('X-CSRFToken', csrftoken);
+		request.setRequestHeader('X-Forwarded-Proto', location.protocol.replace(':', ''));
 
 		request.onreadystatechange = function() {
 			if (this.readyState === XMLHttpRequest.DONE) {
