@@ -1,0 +1,13 @@
+mixin banner_with_parallax(video_name, poster_name, logo, id)
+    .banner(class=id ? `banner_${id}` : '')
+        .banner_video
+            video(poster=`img/${poster_name}`, preload="auto", autoplay="true", loop="true", muted="muted")
+                source(src=`/video/${video_name}.mp4` type='video/mp4')
+                source(src=`/video/${video_name}.webm` type='video/webm')
+        .container
+            .banner_wrapper.pos-rel
+                if logo
+                    .banner_content
+                        .banner_logo.svg
+                            include ../img/logo.svg
+                        .banner_slogan есть идея выпить кофе
