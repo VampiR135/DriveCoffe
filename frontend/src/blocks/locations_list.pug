@@ -2,35 +2,67 @@
     const locationsList = [
         {
             'id': 0,
-            'name': 'Drive Coffee Vega',
-            'address': 'ул. Юбилейная, 40г',
+            'name': 'Drive Coffee Concept Bar',
+            'address': 'ул. Спортивная, 1и',
             'date': 'ПН-ВС',
-            'time': '8:00 - 00:00',
+            'time': '8:00 - 22:00',
             'img': 'location_1.jpg'
         },
         {
             'id': 1,
+            'name': 'Drive Coffee Vega',
+            'address': 'ул. Юбилейная, 40г',
+            'date': 'ПН-ВС',
+            'time': '8:00 - 00:00',
+            'img': 'location_2.jpg'
+        },
+        {
+            'id': 2,
             'name': 'Drive Coffee Komsa',
             'address': 'ул. Коммунистическая, 92г',
             'date': 'ПН-ВС',
             'time': '8:00 - 22:00',
-            'img': 'location_1.jpg'
+            'img': 'location_3.jpg'
         },
         {
-            'id': 2,
+            'id': 3,
+            'name': 'Drive Coffee Zhilina',
+            'address': 'ул. Жилина, 9',
+            'date': 'ПН-ВС',
+            'time': '8:00 - 22:00',
+            'img': 'location_4.jpg'
+        },
+        {
+            'id': 4,
             'name': 'Drive Coffee ParkHouse/Lime',
             'address': 'ул. Автозаводское шоссе, 10в',
             'date': 'ПН-ВС',
             'time': '8:00 - 22:00',
-            'img': 'location_1.jpg'
+            'img': 'location_5.jpg'
         },
         {
-            'id': 3,
+            'id': 5,
+            'name': 'Drive Coffee Park',
+            'address': 'Парк Победы Автозаводского района',
+            'date': 'ПН-ВС',
+            'time': '8:00 - 22:00',
+            'img': 'location_6.jpg'
+        },
+        {
+            'id': 6,
             'name': 'Drive Coffee Naba',
+            'address': 'Набережная 6 квартала',
+            'date': 'ПН-ВС',
+            'time': '8:00 - 22:00',
+            'img': 'location_7.jpg'
+        },
+        {
+            'id': 7,
+            'name': 'Drive Coffee',
             'address': 'закрыто',
-            'date': 'Работаем с мая по август',
+            'date': 'Не работаем',
             'time': null,
-            'img': 'location_1.jpg'
+            'img': 'location_8.jpg'
         },
     ]
 
@@ -44,7 +76,8 @@
                     .locations_list_item_address
                         p=location.address
                         span.has-text-primary=location.date
-                            |:&#160;
+                            if location.time
+                                |:&#160;
                         if location.time
                             | #{location.time}
     .d-md-none.mb-3

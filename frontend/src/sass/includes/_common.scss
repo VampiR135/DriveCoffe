@@ -13,6 +13,22 @@
   }
 }
 
+.w-100 {
+  width: 100%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-0 {
+  width: 0;
+}
+
 .content {
   padding: rem(30) 0;
   min-height: calc(100vh - (465px + 150px));
@@ -39,8 +55,8 @@ a {
 }
 
 h1 {
-  font-size: rem(34);
-  line-height: rem(40);
+  font-size: rem(30);
+  line-height: rem(36);
   margin: 0;
   font-weight: normal;
 

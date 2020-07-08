@@ -6,13 +6,14 @@ block head_end
 block content
 	include blocks/header
 	+header()
-	include blocks/banner
-	+banner('banner_home.jpg', true, 'home')
-	.content.py-4.py-lg-5.home
+	include blocks/banner_with_parallax
+	+banner_with_parallax('home', 'banner_home.jpg', true, 'home')
+	.content.py-4.py-lg-5.home.d-flex.align-items-center.flex-column
 		include blocks/home_slogan
 		include blocks/home_slider
 	include blocks/footer
 
 block body_end
 	script(type="text/javascript" src="/js/vendor/swiper.min.js")
+	script(type="text/javascript" src="/js/vendor/parallax.js")
 	script(type="text/javascript" src="/js/script.js")

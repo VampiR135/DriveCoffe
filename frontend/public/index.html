@@ -72,7 +72,13 @@
 
           </div>
         </header>
-        <div class="banner banner_home" style="background-image: url('/img/banner_home.jpg');">
+        <div class="banner banner_home">
+          <div class="banner_video">
+            <video poster="img/banner_home.jpg" preload="auto" autoplay="true" loop="true" muted="muted">
+              <source src="/video/home.mp4" type="video/mp4">
+              <source src="/video/home.webm" type="video/webm">
+            </video>
+          </div>
           <div class="container">
             <div class="banner_wrapper pos-rel">
               <div class="banner_content">
@@ -120,7 +126,7 @@
             </div>
           </div>
         </div>
-    <div class="content py-4 py-lg-5 home">
+    <div class="content py-4 py-lg-5 home d-flex align-items-center flex-column">
       <div class="container mb-3 mb-lg-5 pb-3 slogan">
         <div class="col-12">
           <div class="row flex-column flex-md-row justify-content-center justify-content-md-between align-items-center align-items-md-end">
@@ -138,7 +144,7 @@
           </div>
         </div>
       </div>
-      <div class="row no-gutters justify-content-center">
+      <div class="row no-gutters justify-content-center w-100">
         <div class="col-10 col-md-12">
           <div class="swiper-container home_slider">
             <div class="swiper-wrapper">
@@ -186,7 +192,7 @@
       </div>
     </div>
     <footer>
-      <div class="container py-4 py-lg-5">
+      <div class="container py-4 py-lg-4">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10">
             <div class="row align-items-center justify-content-between">
@@ -260,6 +266,7 @@
       </div>
     </footer>
     <script type="text/javascript" src="/js/vendor/swiper.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/parallax.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
     <!--script.-->
     <!--  window.ga = function () {ga.q.push(arguments)}; ga.q = []; ga.l = +new Date;-->

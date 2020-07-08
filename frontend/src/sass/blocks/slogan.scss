@@ -1,12 +1,12 @@
 .slogan {
 
   &_text {
-    font-size: rem(34);
-    line-height: rem(40);
+    font-size: rem(28);
+    line-height: rem(26);
 
     @include media-breakpoint-down(lg) {
-      font-size: rem(28);
-      line-height: rem(34);
+      font-size: rem(26);
+      line-height: rem(32);
     }
     @include media-breakpoint-down(md) {
       font-size: rem(20);
@@ -35,7 +35,7 @@
     position: absolute;
     left: 23%;
     bottom: -9px;
-    width: 83%;
+    width: 75%;
     z-index: 1;
 
     @include media-breakpoint-down(sm) {
