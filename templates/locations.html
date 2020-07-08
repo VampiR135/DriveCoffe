@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="Starter Boilerplate">
     <meta name="keywords" content="">
-    <link rel="shortcut icon" href="/static/img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon/favicon-32x32.png">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon/favicon-16x16.png">
     <link rel="mask-icon" href="/static/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" href="/static/css/style.css">
@@ -18,8 +18,8 @@
         <header>
           <div class="container">
             <div class="row header_container align-items-center justify-content-center justify-content-md-between no-gutters">
-              <div class="header_menu row align-items-center justify-content-around d-none d-md-flex"><a class="active" href="/locations/">Локации</a><a href="/vacancy/">Вакансии</a>
-                <!--a(href='/partners/', class=active==='partners' ? 'active' : '') Партнерам-->
+              <div class="header_menu row align-items-center justify-content-around d-none d-md-flex"><a class="active" href="/locations.html">Локации</a><a href="/vacancy.html">Вакансии</a>
+                <!--a(href='/partners.html', class=active==='partners' ? 'active' : '') Партнерам-->
               </div><a class="header_logo d-block" href="/">
                 <div class="svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.32 32.47">
 <path d="M125.62,5.18c0-1.86,1.14-2.97,2.6-3.92
@@ -60,10 +60,10 @@
 </svg>
 
                 </div></a>
-              <div class="header_menu row align-items-center justify-content-between d-none d-md-flex"><a href="/loyalty/">Программа лояльности</a><a href="/feedback/">Открыть кофейню</a></div>
+              <div class="header_menu row align-items-center justify-content-between d-none d-md-flex"><a href="/loyalty.html">Программа лояльности</a><a href="/feedback.html">Открыть кофейню</a></div>
             </div>
-            <div class="header_menu--mobile flex-column align-items-center justify-content-center d-flex d-md-none"><a class="active" href="/locations/">Локации</a><a href="/vacancy/">Вакансии</a>
-              <!--a(href='/partners/', class=active==='partners' ? 'active' : '') Партнерам--><a href="/loyalty/">Программа лояльности</a><a href="/feedback/">Открыть кофейню</a>
+            <div class="header_menu--mobile flex-column align-items-center justify-content-center d-flex d-md-none"><a class="active" href="/locations.html">Локации</a><a href="/vacancy.html">Вакансии</a>
+              <!--a(href='/partners.html', class=active==='partners' ? 'active' : '') Партнерам--><a href="/loyalty.html">Программа лояльности</a><a href="/feedback.html">Открыть кофейню</a>
             </div>
           </div>
           <div class="header_menu_switcher svg d-md-none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" enable-background="new 0 0 22 16">
@@ -78,11 +78,20 @@
             </div>
           </div>
         </div>
-    <div class="content pb-0 pt-4 pt-lg-5 mt-2">
+    <div class="content pb-0 pt-4 pt-lg-5 mt-2 d-flex align-items-center flex-column">
       <div class="locations_list container">
         <div class="row no-gutters d-none d-md-flex justify-content-between">
           <div class="locations_list_item mb-4" data-id="0">
             <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+            <div class="locations_list_item_text">
+              <div class="locations_list_item_name">Drive Coffee Concept Bar</div>
+              <div class="locations_list_item_address">
+                <p>ул. Спортивная, 1и</p><span class="has-text-primary">ПН-ВС:&#160;</span>8:00 - 22:00
+              </div>
+            </div>
+          </div>
+          <div class="locations_list_item mb-4" data-id="1">
+            <div class="locations_list_item_img" style="background-image: url('/static/img/location_2.jpg');"></div>
             <div class="locations_list_item_text">
               <div class="locations_list_item_name">Drive Coffee Vega</div>
               <div class="locations_list_item_address">
@@ -90,8 +99,8 @@
               </div>
             </div>
           </div>
-          <div class="locations_list_item mb-4" data-id="1">
-            <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+          <div class="locations_list_item mb-4" data-id="2">
+            <div class="locations_list_item_img" style="background-image: url('/static/img/location_3.jpg');"></div>
             <div class="locations_list_item_text">
               <div class="locations_list_item_name">Drive Coffee Komsa</div>
               <div class="locations_list_item_address">
@@ -99,8 +108,17 @@
               </div>
             </div>
           </div>
-          <div class="locations_list_item mb-4" data-id="2">
-            <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+          <div class="locations_list_item mb-4" data-id="3">
+            <div class="locations_list_item_img" style="background-image: url('/static/img/location_4.jpg');"></div>
+            <div class="locations_list_item_text">
+              <div class="locations_list_item_name">Drive Coffee Zhilina</div>
+              <div class="locations_list_item_address">
+                <p>ул. Жилина, 9</p><span class="has-text-primary">ПН-ВС:&#160;</span>8:00 - 22:00
+              </div>
+            </div>
+          </div>
+          <div class="locations_list_item mb-4" data-id="4">
+            <div class="locations_list_item_img" style="background-image: url('/static/img/location_5.jpg');"></div>
             <div class="locations_list_item_text">
               <div class="locations_list_item_name">Drive Coffee ParkHouse/Lime</div>
               <div class="locations_list_item_address">
@@ -108,12 +126,30 @@
               </div>
             </div>
           </div>
-          <div class="locations_list_item mb-4" data-id="3">
-            <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+          <div class="locations_list_item mb-4" data-id="5">
+            <div class="locations_list_item_img" style="background-image: url('/static/img/location_6.jpg');"></div>
+            <div class="locations_list_item_text">
+              <div class="locations_list_item_name">Drive Coffee Park</div>
+              <div class="locations_list_item_address">
+                <p>Парк Победы Автозаводского района</p><span class="has-text-primary">ПН-ВС:&#160;</span>8:00 - 22:00
+              </div>
+            </div>
+          </div>
+          <div class="locations_list_item mb-4" data-id="6">
+            <div class="locations_list_item_img" style="background-image: url('/static/img/location_7.jpg');"></div>
             <div class="locations_list_item_text">
               <div class="locations_list_item_name">Drive Coffee Naba</div>
               <div class="locations_list_item_address">
-                <p>закрыто</p><span class="has-text-primary">Работаем с мая по август:&#160;</span>
+                <p>Набережная 6 квартала</p><span class="has-text-primary">ПН-ВС:&#160;</span>8:00 - 22:00
+              </div>
+            </div>
+          </div>
+          <div class="locations_list_item mb-4" data-id="7">
+            <div class="locations_list_item_img" style="background-image: url('/static/img/location_8.jpg');"></div>
+            <div class="locations_list_item_text">
+              <div class="locations_list_item_name">Drive Coffee</div>
+              <div class="locations_list_item_address">
+                <p>закрыто</p><span class="has-text-primary">Не работаем</span>
               </div>
             </div>
           </div>
@@ -124,14 +160,23 @@
               <div class="swiper-slide locations_list_item" data-id="0">
                 <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
                 <div class="locations_list_item_text">
+                  <div class="locations_list_item_name">Drive Coffee Concept Bar</div>
+                  <div class="locations_list_item_address">
+                    <p>ул. Спортивная, 1и</p><span class="has-text-primary">ПН-ВС</span>:&#160;8:00 - 22:00
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide locations_list_item" data-id="1">
+                <div class="locations_list_item_img" style="background-image: url('/img/location_2.jpg');"></div>
+                <div class="locations_list_item_text">
                   <div class="locations_list_item_name">Drive Coffee Vega</div>
                   <div class="locations_list_item_address">
                     <p>ул. Юбилейная, 40г</p><span class="has-text-primary">ПН-ВС</span>:&#160;8:00 - 00:00
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide locations_list_item" data-id="1">
-                <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+              <div class="swiper-slide locations_list_item" data-id="2">
+                <div class="locations_list_item_img" style="background-image: url('/img/location_3.jpg');"></div>
                 <div class="locations_list_item_text">
                   <div class="locations_list_item_name">Drive Coffee Komsa</div>
                   <div class="locations_list_item_address">
@@ -139,8 +184,17 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide locations_list_item" data-id="2">
-                <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+              <div class="swiper-slide locations_list_item" data-id="3">
+                <div class="locations_list_item_img" style="background-image: url('/img/location_4.jpg');"></div>
+                <div class="locations_list_item_text">
+                  <div class="locations_list_item_name">Drive Coffee Zhilina</div>
+                  <div class="locations_list_item_address">
+                    <p>ул. Жилина, 9</p><span class="has-text-primary">ПН-ВС</span>:&#160;8:00 - 22:00
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide locations_list_item" data-id="4">
+                <div class="locations_list_item_img" style="background-image: url('/img/location_5.jpg');"></div>
                 <div class="locations_list_item_text">
                   <div class="locations_list_item_name">Drive Coffee ParkHouse/Lime</div>
                   <div class="locations_list_item_address">
@@ -148,12 +202,30 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide locations_list_item" data-id="3">
-                <div class="locations_list_item_img" style="background-image: url('/static/img/location_1.jpg');"></div>
+              <div class="swiper-slide locations_list_item" data-id="5">
+                <div class="locations_list_item_img" style="background-image: url('/img/location_6.jpg');"></div>
+                <div class="locations_list_item_text">
+                  <div class="locations_list_item_name">Drive Coffee Park</div>
+                  <div class="locations_list_item_address">
+                    <p>Парк Победы Автозаводского района</p><span class="has-text-primary">ПН-ВС</span>:&#160;8:00 - 22:00
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide locations_list_item" data-id="6">
+                <div class="locations_list_item_img" style="background-image: url('/img/location_7.jpg');"></div>
                 <div class="locations_list_item_text">
                   <div class="locations_list_item_name">Drive Coffee Naba</div>
                   <div class="locations_list_item_address">
-                    <p>закрыто</p><span class="has-text-primary">Работаем с мая по август</span>:&#160;
+                    <p>Набережная 6 квартала</p><span class="has-text-primary">ПН-ВС</span>:&#160;8:00 - 22:00
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide locations_list_item" data-id="7">
+                <div class="locations_list_item_img" style="background-image: url('/img/location_8.jpg');"></div>
+                <div class="locations_list_item_text">
+                  <div class="locations_list_item_name">Drive Coffee</div>
+                  <div class="locations_list_item_address">
+                    <p>закрыто</p><span class="has-text-primary">Не работаем</span>:&#160;
                   </div>
                 </div>
               </div>
@@ -167,11 +239,11 @@
       </div>
     </div>
     <footer>
-      <div class="container py-4 py-lg-5">
+      <div class="container py-4 py-lg-4">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10">
             <div class="row align-items-center justify-content-between">
-              <div class="col-6 col-md-4 col-lg-3"><a href="/feedback/">Связаться с нами</a><a class="d-block d-md-none" href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="/feedback.html">Связаться с нами</a><a class="d-block d-md-none" href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
               <div class="col-4 col-lg-3 d-none d-md-block"><a href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
               <div class="social col-6 col-md-4 col-lg-3 row justify-content-end">
                 <div class="col-12 row align-items-center justify-content-between"><a class="social_item svg d-block" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005.89 846.99">

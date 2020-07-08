@@ -18,8 +18,8 @@
         <header>
           <div class="container">
             <div class="row header_container align-items-center justify-content-center justify-content-md-between no-gutters">
-              <div class="header_menu row align-items-center justify-content-around d-none d-md-flex"><a href="/locations/">Локации</a><a href="/vacancy/">Вакансии</a>
-                <!--a(href='/partners/', class=active==='partners' ? 'active' : '') Партнерам-->
+              <div class="header_menu row align-items-center justify-content-around d-none d-md-flex"><a href="/locations.html">Локации</a><a href="/vacancy.html">Вакансии</a>
+                <!--a(href='/partners.html', class=active==='partners' ? 'active' : '') Партнерам-->
               </div><a class="header_logo d-block" href="/">
                 <div class="svg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.32 32.47">
 <path d="M125.62,5.18c0-1.86,1.14-2.97,2.6-3.92
@@ -60,10 +60,10 @@
 </svg>
 
                 </div></a>
-              <div class="header_menu row align-items-center justify-content-between d-none d-md-flex"><a href="/loyalty/">Программа лояльности</a><a href="/feedback/">Открыть кофейню</a></div>
+              <div class="header_menu row align-items-center justify-content-between d-none d-md-flex"><a href="/loyalty.html">Программа лояльности</a><a href="/feedback.html">Открыть кофейню</a></div>
             </div>
-            <div class="header_menu--mobile flex-column align-items-center justify-content-center d-flex d-md-none"><a href="/locations/">Локации</a><a href="/vacancy/">Вакансии</a>
-              <!--a(href='/partners/', class=active==='partners' ? 'active' : '') Партнерам--><a href="/loyalty/">Программа лояльности</a><a href="/feedback/">Открыть кофейню</a>
+            <div class="header_menu--mobile flex-column align-items-center justify-content-center d-flex d-md-none"><a href="/locations.html">Локации</a><a href="/vacancy.html">Вакансии</a>
+              <!--a(href='/partners.html', class=active==='partners' ? 'active' : '') Партнерам--><a href="/loyalty.html">Программа лояльности</a><a href="/feedback.html">Открыть кофейню</a>
             </div>
           </div>
           <div class="header_menu_switcher svg d-md-none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" enable-background="new 0 0 22 16">
@@ -72,7 +72,13 @@
 
           </div>
         </header>
-        <div class="banner banner_home" style="background-image: url('/static/img/banner_home.jpg');">
+        <div class="banner banner_home">
+          <div class="banner_video">
+            <video poster="img/banner_home.jpg" preload="auto" autoplay="true" loop="true" muted="muted">
+              <source src="/video/home.mp4" type="video/mp4">
+              <source src="/video/home.webm" type="video/webm">
+            </video>
+          </div>
           <div class="container">
             <div class="banner_wrapper pos-rel">
               <div class="banner_content">
@@ -120,7 +126,7 @@
             </div>
           </div>
         </div>
-    <div class="content py-4 py-lg-5 home">
+    <div class="content py-4 py-lg-5 home d-flex align-items-center flex-column">
       <div class="container mb-3 mb-lg-5 pb-3 slogan">
         <div class="col-12">
           <div class="row flex-column flex-md-row justify-content-center justify-content-md-between align-items-center align-items-md-end">
@@ -138,7 +144,7 @@
           </div>
         </div>
       </div>
-      <div class="row no-gutters justify-content-center">
+      <div class="row no-gutters justify-content-center w-100">
         <div class="col-10 col-md-12">
           <div class="swiper-container home_slider">
             <div class="swiper-wrapper">
@@ -186,11 +192,11 @@
       </div>
     </div>
     <footer>
-      <div class="container py-4 py-lg-5">
+      <div class="container py-4 py-lg-4">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10">
             <div class="row align-items-center justify-content-between">
-              <div class="col-6 col-md-4 col-lg-3"><a href="/feedback/">Связаться с нами</a><a class="d-block d-md-none" href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
+              <div class="col-6 col-md-4 col-lg-3"><a href="/feedback.html">Связаться с нами</a><a class="d-block d-md-none" href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
               <div class="col-4 col-lg-3 d-none d-md-block"><a href="mailto:mail@drivecoffee.ru">mail@drivecoffee.ru</a></div>
               <div class="social col-6 col-md-4 col-lg-3 row justify-content-end">
                 <div class="col-12 row align-items-center justify-content-between"><a class="social_item svg d-block" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005.89 846.99">
@@ -260,6 +266,7 @@
       </div>
     </footer>
     <script type="text/javascript" src="/static/js/vendor/swiper.min.js"></script>
+    <script type="text/javascript" src="/static/js/vendor/parallax.js"></script>
     <script type="text/javascript" src="/static/js/script.js"></script>
     <!--script.-->
     <!--  window.ga = function () {ga.q.push(arguments)}; ga.q = []; ga.l = +new Date;-->
