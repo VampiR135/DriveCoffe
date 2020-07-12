@@ -5,3 +5,4 @@
 в файле стилей `style.css` необходимо ко всем локальным ссылкам на файлы добавить `/static` (`/img/test.jpg` -> `/static/img/test.jpg`).
 Также все файлы .html из папки `frontend/public` необходимо скопировать в папку `templates`.
 В них так же необходимо ко всем локальным ссылкам на файлы добавить `/static` (`/img/test.jpg` -> `/static/img/test.jpg`).
+Ссылки на локальные страницы надо указывать без `.html` (`/vacancy.html` -> `/vacancy/`)
