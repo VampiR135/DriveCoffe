@@ -35,6 +35,7 @@
   }
   &_home &_wrapper {
     padding-bottom: 77.5%;
+    animation: 21s linear hideContent infinite;
 
     @include media-breakpoint-down(lg) {
       padding-bottom: 57%;
@@ -108,5 +109,14 @@
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+}
+
+@keyframes hideContent {
+  0%, 12%, 88%, 100% {
+    opacity: 1;
+  }
+  15%, 85% {
+    opacity: 0;
   }
 }
