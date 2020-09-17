@@ -145,7 +145,7 @@ window.onload = function (container, options) {
 
 		request.onreadystatechange = function() {
 			if (this.readyState === XMLHttpRequest.DONE) {
-				if(this.status === 200) {
+				if(this.status >= 200 || this.status < 300) {
 					Toastify({
 						text: 'Данные успешно отправлены',
 						close: false,
