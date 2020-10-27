@@ -1,4 +1,5 @@
 .toastify_message {
+  max-width: 100%;
   color: $black;
   white-space: nowrap;
   cursor: default;
@@ -6,7 +7,10 @@
 
   @include media-breakpoint-down(md) {
     position: fixed;
-    width: 100%;
+    width: auto;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) !important;
     text-align: center;
     text-align-last: center;
     padding: 10px 15px;
