@@ -237,6 +237,115 @@ window.onload = function (container, options) {
 //Yandex maps
 if(window.ymaps) {
 	let myMap, objectManager;
+	const locationList = {
+		"type": "FeatureCollection",
+		"features": [
+			{
+				"type": "Feature",
+				"id": 0,
+				"geometry": {"type": "Point", "coordinates": [53.497424, 49.293479]},
+				"properties": {
+					"balloonContent": "<p><b>Drive Coffee Concept Bar</b></p><p>ул. Спортивная, 1и</p>",
+					"clusterCaption": "cluster_1",
+					"hintContent": "Drive Coffee Concept Bar"
+				},
+				"options": {
+					"iconColor": "#ff0000"
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 1,
+				"geometry": {"type": "Point", "coordinates": [53.500095, 49.273175]},
+				"properties": {
+					"balloonContent": "<p><b>Drive Coffee Vega</b></p><p>ул. Юбилейная, 40г</p>",
+					"clusterCaption": "cluster_1",
+					"hintContent": "Drive Coffee Vega"
+				},
+				"options": {
+					"iconColor": "#ff0000"
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 2,
+				"geometry": {"type": "Point", "coordinates": [53.472830, 49.478180]},
+				"properties": {
+					"balloonContent": "<p><b>Drive Coffee Komsa</b></p><p>ул. Коммунистическая, 92г</p>",
+					"clusterCaption": "cluster_1",
+					"hintContent": "Drive Coffee Komsa"
+				},
+				"options": {
+					"iconColor": "#ff0000"
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 3,
+				"geometry": {"type": "Point", "coordinates": [53.510417, 49.410619]},
+				"properties": {
+					"balloonContent": "<p><b>Drive Coffee Zhilina</b></p><p>ул. Жилина, 9</p>",
+					"clusterCaption": "cluster_1",
+					"hintContent": "Drive Coffee Zhilina"
+				},
+				"options": {
+					"iconColor": "#ff0000"
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 4,
+				"geometry": {"type": "Point", "coordinates": [53.539840, 49.389528]},
+				"properties": {
+					"balloonContent": "<p><b>Drive Coffee ParkHouse/Lime</b></p><p>ул. Автозаводское шоссе, 10в</p>",
+					"clusterCaption": "cluster_1",
+					"hintContent": "Drive Coffee ParkHouse/Lime"
+				},
+				"options": {
+					"iconColor": "#ff0000"
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 5,
+				"geometry": {"type": "Point", "coordinates": [53.508960, 49.272400]},
+				"properties": {
+					"balloonContent": "<p><b>Drive Coffee Park</b></p><p>Парк Победы Автозаводского района</p>",
+					"clusterCaption": "cluster_1",
+					"hintContent": "Drive Coffee Park"
+				},
+				"options": {
+					"iconColor": "#ff0000"
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 6,
+				"geometry": {"type": "Point", "coordinates": [53.501852, 49.252380]},
+				"properties": {
+					"balloonContent": "<p><b>Drive Coffee Naba</b></p><p>Набережная 6 квартала</p>",
+					"clusterCaption": "cluster_1",
+					"hintContent": "Drive Coffee Naba"
+				},
+				"options": {
+					"iconColor": "#ff0000"
+				}
+			},
+			{
+				"type": "Feature",
+				"id": 7,
+				"geometry": {"type": "Point", "coordinates": [53.522170, 49.414788]},
+				"properties": {
+					"balloonContent": "<p><b>Drive Coffee</b></p>",
+					"clusterCaption": "cluster_1",
+					"hintContent": "Drive Coffee"
+				},
+				"options": {
+					"iconColor": "#ff0000"
+				}
+			}
+		]
+	};
 
 	const openMarkerBaloon = (id) => {
 		const objectState = window.objectManager.getObjectState(id);
@@ -246,6 +355,8 @@ if(window.ymaps) {
 		} else {
 			window.objectManager.objects.balloon.open(id);
 		}
+		let markerCoordinates = locationList.features.filter(item => item.id === parseInt(id))[0].geometry.coordinates;
+		myMap.setCenter(markerCoordinates, myMap.getZoom());
 	};
 
 	ymaps.ready(init);
@@ -268,117 +379,8 @@ if(window.ymaps) {
 		objectManager.objects.options.set('iconColor', '#ff0000');
 		objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
 		myMap.geoObjects.add(objectManager);
-		const data = {
-			"type": "FeatureCollection",
-			"features": [
-				{
-					"type": "Feature",
-					"id": 0,
-					"geometry": {"type": "Point", "coordinates": [53.497424, 49.293479]},
-					"properties": {
-						"balloonContent": "<p><b>Drive Coffee Concept Bar</b></p><p>ул. Спортивная, 1и</p>",
-						"clusterCaption": "cluster_1",
-						"hintContent": "Drive Coffee Concept Bar"
-					},
-					"options": {
-						"iconColor": "#ff0000"
-					}
-				},
-				{
-					"type": "Feature",
-					"id": 1,
-					"geometry": {"type": "Point", "coordinates": [53.500064, 49.273558]},
-					"properties": {
-						"balloonContent": "<p><b>Drive Coffee Vega</b></p><p>ул. Юбилейная, 40г</p>",
-						"clusterCaption": "cluster_1",
-						"hintContent": "Drive Coffee Vega"
-					},
-					"options": {
-						"iconColor": "#ff0000"
-					}
-				},
-				{
-					"type": "Feature",
-					"id": 2,
-					"geometry": {"type": "Point", "coordinates": [53.472816, 49.478163]},
-					"properties": {
-						"balloonContent": "<p><b>Drive Coffee Komsa</b></p><p>ул. Коммунистическая, 92г</p>",
-						"clusterCaption": "cluster_1",
-						"hintContent": "Drive Coffee Komsa"
-					},
-					"options": {
-						"iconColor": "#ff0000"
-					}
-				},
-				{
-					"type": "Feature",
-					"id": 3,
-					"geometry": {"type": "Point", "coordinates": [53.510417, 49.410619]},
-					"properties": {
-						"balloonContent": "<p><b>Drive Coffee Zhilina</b></p><p>ул. Жилина, 9</p>",
-						"clusterCaption": "cluster_1",
-						"hintContent": "Drive Coffee Zhilina"
-					},
-					"options": {
-						"iconColor": "#ff0000"
-					}
-				},
-				{
-					"type": "Feature",
-					"id": 4,
-					"geometry": {"type": "Point", "coordinates": [53.539356, 49.390381]},
-					"properties": {
-						"balloonContent": "<p><b>Drive Coffee ParkHouse/Lime</b></p><p>ул. Автозаводское шоссе, 10в</p>",
-						"clusterCaption": "cluster_1",
-						"hintContent": "Drive Coffee ParkHouse/Lime"
-					},
-					"options": {
-						"iconColor": "#ff0000"
-					}
-				},
-				{
-					"type": "Feature",
-					"id": 5,
-					"geometry": {"type": "Point", "coordinates": [53.510958, 49.275073]},
-					"properties": {
-						"balloonContent": "<p><b>Drive Coffee Park</b></p><p>Парк Победы Автозаводского района</p>",
-						"clusterCaption": "cluster_1",
-						"hintContent": "Drive Coffee Park"
-					},
-					"options": {
-						"iconColor": "#ff0000"
-					}
-				},
-				{
-					"type": "Feature",
-					"id": 6,
-					"geometry": {"type": "Point", "coordinates": [53.501852, 49.252380]},
-					"properties": {
-						"balloonContent": "<p><b>Drive Coffee Naba</b></p><p>Набережная 6 квартала</p>",
-						"clusterCaption": "cluster_1",
-						"hintContent": "Drive Coffee Naba"
-					},
-					"options": {
-						"iconColor": "#ff0000"
-					}
-				},
-				{
-					"type": "Feature",
-					"id": 7,
-					"geometry": {"type": "Point", "coordinates": [53.522170, 49.414788]},
-					"properties": {
-						"balloonContent": "<p><b>Drive Coffee</b></p>",
-						"clusterCaption": "cluster_1",
-						"hintContent": "Drive Coffee"
-					},
-					"options": {
-						"iconColor": "#ff0000"
-					}
-				}
-			]
-		};
 
-		objectManager.add(data);
+		objectManager.add(locationList);
 
 		window.openMarkerBaloon(0);
 	}

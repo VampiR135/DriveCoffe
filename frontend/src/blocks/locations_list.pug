@@ -62,14 +62,15 @@
             'address': null,
             'date': 'ПН-ВС',
             'time': '8:00 - 22:00',
-            'img': 'location_8.jpg'
+            'img': 'location_8.jpg',
+            'disable': true
         },
     ]
 
 .locations_list.container
     .row.no-gutters.d-none.d-md-flex.justify-content-between
         for location in locationsList
-            .locations_list_item.mb-4(data-id=location.id)
+            .locations_list_item.mb-4(data-id=location.id, style=(location.disable ? 'pointer-events: none' : ''))
                 .locations_list_item_img(style=`background-image: url('/img/${location.img}');`)
                 .locations_list_item_text
                     .locations_list_item_name=location.name

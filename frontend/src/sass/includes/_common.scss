@@ -31,16 +31,16 @@
 
 .content {
   padding: rem(30) 0;
-  min-height: calc(100vh - (465px + 150px));
+  min-height: calc(100vh - (465px + 86px));
 
   @include media-breakpoint-down(lg) {
-    min-height: calc(100vh - (314px + 153px));
+    min-height: calc(100vh - (390px + 88px));
   }
   @include media-breakpoint-down(md) {
-    min-height: calc(100vh - (277px + 83px));
+    min-height: calc(100vh - (277px + 77px));
   }
   @include media-breakpoint-down(sm) {
-    min-height: calc(100vh - (222px + 103px));
+    min-height: calc(100vh - (280px + 96px));
   }
 }
 
